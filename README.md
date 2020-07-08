@@ -1,2 +1,2 @@
 # i3conf
-my own i3 config
+My own i3 config for deploying on new installs.
