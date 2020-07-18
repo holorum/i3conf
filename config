@@ -24,7 +24,7 @@ font pango:monospace 8
 
 # xss-lock grabs a logind suspend inhibit lock and will use i3lock to lock the
 # screen before suspend. Use loginctl lock-session to lock your screen.
-exec --no-startup-id xss-lock --transfer-sleep-lock -- i3lock -t -i /home/holorum/Downloads/5076933-lyza-made-in-abyss.png --nofork
+exec --no-startup-id xss-lock --transfer-sleep-lock -- i3lock-multimonitor
 exec setxkbmap -layout hu
 # NetworkManager is the most popular way to manage wireless networks on Linux,
 # and nm-applet is a desktop environment-independent system tray GUI for it.
@@ -41,13 +41,16 @@ exec /home/holorum/.screenlayout/basic.sh
 exec nitrogen --restore 
 
 bindsym $mod+Ctrl+h exec st htop
-bindsym $mod+Ctrl+l exec i3lock -t -i /home/holorum/Downloads/5076933-lyza-made-in-abyss.png && sleep 10 && xset dpms force off
+bindsym $mod+Ctrl+l exec i3lock-multimonitor && sleep 10 && xset dpms force off
 bindsym $mod+t exec thunderbird
 bindsym $mod+i exec st /home/holorum/wait.sh 180
 bindsym $mod+o exec st /home/holorum/wait.sh 210
 bindsym $mod+p exec st /home/holorum/wait.sh 240
 bindsym $mod+m exec st /home/holorum/wait.sh 300
 bindsym $mod+n exec /home/holorum/n.sh
+bindsym $mod+c exec chromium
+bindsym $mod+Shift+T exec telegram-desktop
+bindsym $mod+Shift+F exec pcmanfm
 
 bindsym $mod+b exec st bc 
 
@@ -206,6 +209,8 @@ bindsym $mod+r mode "resize"
 #bar {
 #        status_command i3status
 #}
+
+exec wal -n -i /home/holorum/Downloads/azur-lane-long-island-chain-anime-games-anime-19815.jpg
 
 exec_always /home/holorum/.screenlayout/basic.sh
 exec_always nitrogen --head=0 --set-auto /home/holorum/Downloads/azur-lane-long-island-chain-anime-games-anime-19815.jpg
