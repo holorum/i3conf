@@ -38,10 +38,10 @@ exec /home/holorum/nas.sh
 exec autorandr --change work
 exec_always --no-startup-id picom -b --backend glx --vsync
 exec /home/holorum/.screenlayout/basic.sh
-exec nitrogen --restore 
+#exec nitrogen --restore 
 
 bindsym $mod+Ctrl+h exec st htop
-bindsym $mod+Ctrl+l exec i3lock-multimonitor && sleep 10 && xset dpms force off
+bindsym $mod+Ctrl+l exec i3lock-multimonitor && sleep 5 && xset dpms force off
 bindsym $mod+t exec thunderbird
 bindsym $mod+i exec st /home/holorum/wait.sh 180
 bindsym $mod+o exec st /home/holorum/wait.sh 210
@@ -211,6 +211,8 @@ bindsym $mod+r mode "resize"
 #}
 
 exec wal -n -i /home/holorum/Downloads/azur-lane-long-island-chain-anime-games-anime-19815.jpg
+exec numlockx
+exec unclutter
 
 exec_always /home/holorum/.screenlayout/basic.sh
 exec_always nitrogen --head=0 --set-auto /home/holorum/Downloads/azur-lane-long-island-chain-anime-games-anime-19815.jpg
