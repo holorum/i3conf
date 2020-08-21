@@ -152,18 +152,10 @@ source /usr/share/zsh/plugins/zsh-syntax-highlighting/zsh-syntax-highlighting.zs
 
 export EDITOR='nvim'
 
-alias vim='nvim'
-alias ll='ls -al'
-alias AR='yay -Yc && yes | yay -Scc'
-alias dfh='df -h'
-alias 'cd..'='cd ..'
-alias yt='youtube-dl'
-alias ytdl='youtube-dl'
-alias rr='rsync -aP /home/holorum /run/media/holorum/DATA/backup'
-alias RR='rsync -aPxEghop / /run/media/holorum/DATA/whole_sys_backup_test'
-alias vzr='vim ~/.zshrc'
-alias sr='ssh root@hackerrr.com'
-alias wtr='curl wttr.in'
+source als.sh
+
+export DEFAULT_USER=$USER
+POWERLEVEL9K_ALWAYS_SHOW_CONTEXT=true
 
 neofetch
 source ~/powerlevel10k/powerlevel10k.zsh-theme

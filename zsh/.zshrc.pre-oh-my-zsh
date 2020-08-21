@@ -73,11 +73,5 @@ source /usr/share/zsh/plugins/zsh-syntax-highlighting/zsh-syntax-highlighting.zs
 
 export EDITOR='nvim'
 
-alias vim='nvim'
-alias ll='ls -al'
-alias AR='yay -Yc && yes | yay -Scc'
-alias dfh='df -h'
-alias 'cd..'='cd ..'
-alias yt='youtube-dl'
-alias ytdl='youtube-dl'
+source als.sh
 neofetch
