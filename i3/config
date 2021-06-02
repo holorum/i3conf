@@ -43,10 +43,6 @@ exec $HOME/.screenlayout/basic.sh
 bindsym $mod+Ctrl+h exec st htop
 bindsym $mod+Ctrl+l exec i3lock-multimonitor && sleep 5 && xset dpms force off
 bindsym $mod+t exec thunderbird
-bindsym $mod+i exec st $HOME/.scripts/wait.sh 180
-bindsym $mod+o exec st $HOME/.scripts/wait.sh 210
-bindsym $mod+p exec st $HOME/.scripts/wait.sh 240
-bindsym $mod+m exec st $HOME/.scripts/wait.sh 300
 bindsym $mod+n exec $HOME/.scripts/n.sh
 bindsym $mod+c exec firefox
 bindsym $mod+Shift+T exec telegram-desktop
@@ -220,5 +216,4 @@ exec_always $HOME/.screenlayout/basic.sh
 exec_always nitrogen --head=0 --set-auto $HOME/wallpapers/bg1.jpg 
 exec_always nitrogen --head=1 --set-auto $HOME/wallpapers/bg2.png
 exec flameshot
-exec /home/holorum/polkit.sh
 
