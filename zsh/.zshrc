@@ -152,12 +152,10 @@ source /usr/share/zsh/plugins/zsh-syntax-highlighting/zsh-syntax-highlighting.zs
 
 export EDITOR='vim'
 
-source als.sh
+source $HOME/als.sh
 
 export DEFAULT_USER=$USER
 POWERLEVEL9K_ALWAYS_SHOW_CONTEXT=true
-
-export LFS='/mnt/lfs'
 
 neofetch
 source ~/powerlevel10k/powerlevel10k.zsh-theme

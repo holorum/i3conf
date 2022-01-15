@@ -57,6 +57,10 @@ font-0 = fixed:pixelsize=10;1
 font-1 = unifont:fontformat=truetype:size=8:antialias=false;0
 font-2 = siji:pixelsize=10;1
 
+font-3 = "mononoki Nerd Font Mono:style=Bold:size=12;4"
+font-4 = "mononoki Nerd Font Mono:style=Bold:size=18;4"
+font-5 = "mononoki Nerd Font Mono:style=Bold:size=24;4"
+
 modules-left = bspwm i3
 modules-center = mpd
 modules-right = filesystem xbacklight pulseaudio xkeyboard memory cpu wlan eth battery temperature date powermenu
@@ -87,7 +91,7 @@ label = %title:0:30:...%
 type = internal/xkeyboard
 blacklist-0 = num lock
 
-format-prefix = " "
+;format-prefix = " "
 format-prefix-foreground = ${colors.foreground-alt}
 format-prefix-underline = ${colors.secondary}
 
@@ -135,10 +139,22 @@ label-empty-padding = 2
 
 [module/i3]
 type = internal/i3
-format = <label-state> <label-mode>
 index-sort = true
 wrapping-scroll = false
 
+ws-icon-0 = 1;
+ws-icon-1 = 2;
+ws-icon-2 = 3;
+ws-icon-3 = 4;
+ws-icon-4 = 5;
+ws-icon-5 = 6;
+ws-icon-6 = 7;7
+ws-icon-7 = 8;8
+ws-icon-8 = 9;9
+ws-icon-9 = 10;
+ws-icon-default = 
+
+format = <label-state> <label-mode>
 ; Only show workspaces on the same output as the bar
 ;pin-workspaces = true
 
@@ -147,13 +163,14 @@ label-mode-foreground = #000
 label-mode-background = ${colors.primary}
 
 ; focused = Active workspace on focused monitor
-label-focused = %index%
+label-focused = %icon%
+label-focused-font=1
 label-focused-background = ${colors.background-alt}
 label-focused-underline= ${colors.primary}
 label-focused-padding = 2
 
 ; unfocused = Inactive workspace on any monitor
-label-unfocused = %index%
+label-unfocused = %icon%
 label-unfocused-padding = 2
 
 ; visible = Active workspace on unfocused monitor
@@ -171,17 +188,18 @@ label-urgent-padding = 2
 ; label-separator = |
 
 
+
+
 [module/mpd]
 type = internal/mpd
-format-online = <label-song>  <icon-prev> <icon-stop> <toggle> <icon-next>
+format-online = <icon-prev>     <label-song>      <icon-next>     <toggle>     <icon-stop>
+icon-prev = 
+icon-stop = 
+icon-play = 
+icon-pause = 
+icon-next = 
 
-icon-prev = 
-icon-stop = 
-icon-play = 
-icon-pause = 
-icon-next = 
-
-label-song-maxlen = 25
+label-song-maxlen = 50
 label-song-ellipsis = true
 
 [module/xbacklight]
@@ -246,7 +264,7 @@ ramp-signal-foreground = ${colors.foreground-alt}
 
 [module/eth]
 type = internal/network
-interface = enp1s0
+interface = enp5s0f1
 interval = 3.0
 
 format-connected-underline = #55aa55
@@ -366,8 +384,10 @@ animation-discharging-framerate = 750
 
 [module/temperature]
 type = internal/temperature
+interval = 0.5
 thermal-zone = 0
 warn-temperature = 60
+hwmon-path = /sys/devices/pci0000:00/0000:00:18.3/hwmon/hwmon1/temp1_input
 
 format = <ramp> <label>
 format-underline = #f50a4d
@@ -379,7 +399,7 @@ label-warn = %temperature-c%
 label-warn-foreground = ${colors.secondary}
 
 ramp-0 = 
-ramp-1 = 
+ramp-1 = 
 ramp-2 = 
 ramp-foreground = ${colors.foreground-alt}
 
@@ -390,9 +410,11 @@ expand-right = true
 
 format-spacing = 1
 
-label-open = 
+;label-open = 
+label-open =  
 label-open-foreground = ${colors.secondary}
-label-close =  cancel
+;label-close =  cancel
+label-close = cancel
 label-close-foreground = ${colors.secondary}
 label-separator = |
 label-separator-foreground = ${colors.foreground-alt}
@@ -567,7 +589,7 @@ margin-bottom = 5
 ; ; If the value is empty or undefined, the atom value
 ; ; will be created from the following template: polybar-[BAR]_[MONITOR]
 ; ; NOTE: The placeholders are not available for custom values
-; wm-name =
+wm-name = i3
 ;
 ; ; Locale used to localize various module data (e.g. date)
 ; ; Expects a valid libc locale, for example: sv_SE.UTF-8
