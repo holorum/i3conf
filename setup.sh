@@ -1,6 +1,7 @@
 #!/bin/sh
 
 mkdir -p $HOME/.config/i3
+mkdir -p $HOME/.config/vlc
 mkdir -p $HOME/.config/polybar
 mkdir -p $HOME/.scripts
 mkdir -p $HOME/wallpapers
@@ -9,6 +10,8 @@ mkdir -p $HOME/.screenlayout
 cp wallpapers/* $HOME/wallpapers
 
 cp scripts/n.sh $HOME/.scripts
+
+cp vlc/vlcrc $HOME/.config/vlc/vlcrc 
 
 cp scripts/basic.sh $HOME/.screenlayout
 
