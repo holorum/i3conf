@@ -1,6 +1,6 @@
 #!/bin/bash
 
-apt install zsh neofetch bash-completion vim
+sudo apt install zsh neofetch bash-completion vim
 
 mkdir -p $HOME/.cache/zsh
 touch $HOME/.cache/zsh/history
