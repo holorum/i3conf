@@ -9,7 +9,6 @@ unclutter
 xorg-xinit
 xorg-server
 xorg-xkill
-nm-applet
 pcmanfm
 firefox
 thunderbird
