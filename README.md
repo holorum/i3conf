@@ -12,3 +12,4 @@ By running `debian.sh` you can set up zsh on Debian.
 
 # Test
 This is a test from JetBrains.
+This is hoping that it'll actually sign the commit.
